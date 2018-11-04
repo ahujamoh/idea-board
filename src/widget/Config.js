@@ -5,10 +5,10 @@ export const CATEGORIES = ['Sports', 'Fashion', 'Studies', 'Cars', 'Jobs', 'Todo
 export const STATUSES = ['Todo', 'In Progress', 'Completed'];
 
 /** add priorities to be displayed in this array, comma separated */
-export const PRIORITIES = ['primary', 'secondary', 'tertiary'];
+export const PRIORITIES = ['primary', 'secondary', 'default'];
 
 export default {
-  CATEGORIES,
-  STATUSES,
-  PRIORITIES
+    CATEGORIES,
+    STATUSES,
+    PRIORITIES
 };

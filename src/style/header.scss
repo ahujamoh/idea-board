@@ -1,0 +1,52 @@
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    background: url('../assets/images/bg.jpg');
+}
+
+.header-app-name {
+    display: flex;
+}
+
+.header-app-name span {
+    color: white;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.header-logo {
+    background: url('../assets/images/logo.png');
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+}
+
+.header-menu div {
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-radius: 0 12px 0px 12px;
+    margin-bottom: 5px;
+    padding: 8px 10px;
+}
+
+.header-menu div:hover {
+    background-color: white;
+    border-color: #569ce3;
+    color: #569ce3;
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
