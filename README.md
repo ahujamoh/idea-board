@@ -4,7 +4,7 @@ Idea board app where you can create, update, delete and sort items.
 
 ### Logic
 
-1. when there are no ideas - sort buttons are hidden, only the "Create a New Idea button" is visible
+1. when there are no ideas - sort buttons (in the top-right header) are hidden, only the "Create a New Idea button" is visible
 1. In the pop-up user can,
 
     1. give "Title" to the idea (not mandatory)
@@ -12,11 +12,11 @@ Idea board app where you can create, update, delete and sort items.
     1. choose priority oneOf ["default", "primary", "secondary"]
     1. choose category oneOf ["sports", "fashion", "studies", "Uncategorized"]
     1. select status oneOf ["todo", "in progress", "completed"]
-       priorities, categories and status are **configurable** at (idea-board\src\widget\Config.js)
+       **priorities, categories and status are configurable** at (idea-board\src\widget\Config.js)
 
-1. _Ideas can be sorted based on the "Priorities" or "Categories"_
+1. **Ideas can be sorted based on the "Priorities" or "Categories"**
 
-    1. if the user does not select any of these while creating an idea, _default values default/Uncategorized are attached respectively to the idea._
+    1. if the user does not select any of these while creating an idea, **default values default/Uncategorized are attached respectively to the idea.**
 
 On the dashboard (where all the ideas are mounted), each idea is shown on the card.
 
