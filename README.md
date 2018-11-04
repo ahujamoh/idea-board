@@ -2,6 +2,8 @@
 
 Idea board app where you can create, update, delete and sort items.
 
+## Demo can be seen at [surge.sh](ideaboard.samfed.surge.sh) and [netlify](https://pedantic-lalande-bcfadd.netlify.com/)
+
 ### Logic
 
 1. when there are no ideas - sort buttons (in the top-right header) are hidden, only the "Create a New Idea button" is visible

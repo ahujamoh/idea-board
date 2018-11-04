@@ -2,6 +2,7 @@
 .idea
 node_modules/
 dist/
+build/
 compiled/
 tests/coverage/
 tests_output/

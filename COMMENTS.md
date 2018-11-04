@@ -21,3 +21,5 @@
 4. the **STRETCH PART** was not completed.
 
 ###Thank You.
+
+## Demo can be seen at [surge.sh](ideaboard.samfed.surge.sh) and [netlify](https://pedantic-lalande-bcfadd.netlify.com/)
