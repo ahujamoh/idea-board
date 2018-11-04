@@ -2,7 +2,7 @@
 
 Idea board app where you can create, update, delete and sort items.
 
-## Demo can be seen at [surge.sh](ideaboard.samfed.surge.sh) and [netlify](https://pedantic-lalande-bcfadd.netlify.com/)
+## Demo can be seen at [surge.sh](http://ideaboard.samfed.surge.sh) and [netlify](https://pedantic-lalande-bcfadd.netlify.com/)
 
 ### Logic
 
