@@ -1,20 +1,23 @@
 import React from 'react';
 import {FORM_FIELDS} from '../Consts';
+import {CATEGORIES, PRIORITIES, STATUSES} from '../Config';
 
 export default function CreateNewIdeaPopUpView({onParameterChange, state, closeButtonClickHandler, onSaveClick}) {
   return (
-    <div id="popup1" className="overlay">
+    <div className="overlay">
       <div className="popup">
-        <h2>CREATE YOUR IDEA</h2>
-        <div
-          className="close"
-          onClick={() => {
-            closeButtonClickHandler();
-          }}
-        >
-          &times;
+        <div className="popup--header">
+          <h2>CREATE YOUR IDEA</h2>
+          <div
+            className="close"
+            onClick={() => {
+              closeButtonClickHandler();
+            }}
+          >
+            &times;
+          </div>
         </div>
-        <div className="content">
+        <div className="pop--content">
           <div>Title</div>
           <input
             type="text"
@@ -36,21 +39,25 @@ export default function CreateNewIdeaPopUpView({onParameterChange, state, closeB
               onParameterChange(e, FORM_FIELDS.DESCRIPTION);
             }}
           />
-          <div>Importance</div>
+
+          {/* priorities */}
+          <div>Choose Priority</div>
           <select
-            defaultValue={state.ideaDetails.importance}
+            defaultValue={state.ideaDetails.priority}
             onChange={(e) => {
-              onParameterChange(e, FORM_FIELDS.IMPORTANCE);
+              onParameterChange(e, FORM_FIELDS.PRIORITY);
             }}
           >
             <option value="" selected disabled hidden>
-              Choose One
+              Select One
             </option>
-            <option value="Primary">Primary</option>
-            <option value="Secondary">Secondary</option>
-            <option value="Tertiary">Tertiary</option>
+            {PRIORITIES.map((priority) => {
+              return <option value={priority}>{priority}</option>;
+            })}
           </select>
-          <div>Category</div>
+
+          {/* Categories */}
+          <div>Choose Category</div>
           <select
             defaultValue={state.ideaDetails.category}
             onChange={(e) => {
@@ -58,14 +65,27 @@ export default function CreateNewIdeaPopUpView({onParameterChange, state, closeB
             }}
           >
             <option value="" selected disabled hidden>
+              Select One
+            </option>
+            {CATEGORIES.map((category) => {
+              return <option value={category}>{category}</option>;
+            })}
+          </select>
+
+          {/* Statuses */}
+          <div>Select Status</div>
+          <select
+            defaultValue={state.ideaDetails.status}
+            onChange={(e) => {
+              onParameterChange(e, FORM_FIELDS.STATUS);
+            }}
+          >
+            <option value="" selected disabled hidden>
               Choose One
             </option>
-            <option value="Sports">Sports</option>
-            <option value="Fashion">Fashion</option>
-            <option value="Studies">Studies</option>
-            <option value="Cars">Cars</option>
-            <option value="Jobs">Jobs</option>
-            <option value="Todo">Todo</option>
+            {STATUSES.map((status) => {
+              return <option value={status}>{status}</option>;
+            })}
           </select>
           {<button onClick={onSaveClick}>Save Idea</button>}
         </div>

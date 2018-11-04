@@ -3,7 +3,6 @@ import EmptyBoardView from './widget/templates/IdeaBoard.emptyBoardView';
 import CreateNewIdeaPopUpView from './widget/templates/IdeaBoard.createNewIdeaPopUpView';
 import IdeasView from './widget/templates/IdeaBoard.ideasView';
 import CreateNewIdeaButtonView from './widget/templates/IdeaBoard.createNewIdeaButtonView';
-import './App.css';
 import {FORM_FIELDS} from './widget/Consts';
 import _groupBy from 'lodash/groupBy';
 
@@ -32,6 +31,11 @@ export default class App extends Component {
     });
   }
 
+  /**
+   * @desc this method is invoked whenever a parameter is changed/updated in the create-idea pop-up
+   * @param e - event (object)
+   * @param parameter - changed parameter (string)
+   */
   onParameterChange(e, parameter) {
     const updatedIdeaDetails = {
       ...this.state.ideaDetails,
@@ -49,6 +53,11 @@ export default class App extends Component {
     return `On:${date} at:${time}`;
   }
 
+  /**
+   * @desc it is invoked every time user clicks on 'Save Idea' button in pop-up.
+   * it updates the state to accommodate the new idea
+   * it also closes the pop-up
+   */
   onSaveIdeaClick() {
     let updatedIdeasOnBoard = [...this.state.ideasOnBoard];
 
@@ -57,6 +66,10 @@ export default class App extends Component {
       creationTime: this.getCurrentDateAndTIme()
     };
 
+    /**
+     * @desc this condition checks if the pop-up is open for "updating" the idea,
+     * if yes, it filters out the prev idea and enters the updated one in its place.
+     */
     if (this.state.isUpdatingIdea) {
       updatedIdeasOnBoard = updatedIdeasOnBoard.filter((idea) => {
         return idea[FORM_FIELDS.TITLE] !== this.state.ideaToUpdate[FORM_FIELDS.TITLE];
@@ -96,6 +109,11 @@ export default class App extends Component {
     });
   }
 
+  /** @desc it is invoked when user click on the update button on the individual idea level
+   * it updates the state (ideaDetails) so that the pop-up is opened with existing values already filled
+   * it also sets the showPopup flag to true
+   * @param idea - particular idea being updated (object)
+   */
   onIdeaUpdate(idea) {
     this.setState({
       isUpdatingIdea: true,
@@ -115,7 +133,7 @@ export default class App extends Component {
   render() {
     const isBoardEmpty = this.state.ideasOnBoard.length === 0;
     return (
-      <div>
+      <div className="app-container">
         {this.state.showCreateNewIdeaPopUp && (
           <CreateNewIdeaPopUpView
             onParameterChange={this.onParameterChange}

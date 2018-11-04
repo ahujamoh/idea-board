@@ -1,8 +1,9 @@
 export const FORM_FIELDS = {
   TITLE: 'title',
   DESCRIPTION: 'description',
-  IMPORTANCE: 'importance',
-  CATEGORY: 'category'
+  PRIORITY: 'priority',
+  CATEGORY: 'category',
+  STATUS: 'status'
 };
 
 export default {
