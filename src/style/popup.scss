@@ -24,13 +24,13 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 40vw;
-    padding: 25px;
-    background-color: lightgray;
+    background-color: white;
+    width: 80vw;
+    padding: 15px;
 }
 
 .popup-segment {
-    padding: 0px 15px;
+    padding: 0px 5px;
 }
 
 .popup--header {
@@ -42,15 +42,15 @@
 .popup--header-title {
     margin-top: 0;
     color: #569ce3;
-    line-height: 2.7em;
-    letter-spacing: 1.5px;
-    font-size: 16px;
     font-weight: 600;
+    line-height: 0;
+    letter-spacing: 1.5px;
+    font-size: 14px;
 }
 
 .popup--header-close {
-    font-size: 30px;
     font-weight: bold;
+    font-size: 26px;
 }
 .popup--header-close:hover {
     color: #569ce3;
@@ -79,6 +79,8 @@
 
 .popup--content-section-field {
     width: 100%;
+    border: 1px solid #569ce3;
+    border-radius: 5px;
 }
 
 .popup-buttons {
@@ -94,7 +96,7 @@
     font-size: 1em;
     position: relative;
     font-size: 12px;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     background-color: transparent;
     border-radius: 0 15px 0px 15px;
     border-color: #569ce3;
@@ -106,20 +108,14 @@
     background-color: #569ce3;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 580px) {
     .popup {
-        width: 80vw;
-        padding: 15px;
+        width: 60vw;
     }
-    .popup-segment {
-        padding: 0px 5px;
-    }
-    .popup--header-title {
-        line-height: 0;
-        letter-spacing: 1.5px;
-        font-size: 14px;
-    }
-    .popup--header-close {
-        font-size: 26px;
+}
+
+@media screen and (min-width: 980px) {
+    .popup {
+        width: 40vw;
     }
 }

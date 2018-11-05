@@ -1,19 +1,27 @@
 @import './style/App.scss';
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
 input,
 textarea,
 select {
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-  border-radius: 5px;
-  padding: 7px;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none !important;
+    box-shadow: 0 0 10px #719ece;
 }
